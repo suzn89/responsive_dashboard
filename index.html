@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>template</title>
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery-2.1.3.min.js"></script>
+</head>
+<body>
+  <header id="header">    
+  </header> <!-- // header -->
+  <div id="container">
+    <nav id="nav">
+      <button class="btn__panel--ctrl">닫기</button>
+    </nav> <!-- // nav -->
+    <section id="section__wrap">
+      <h2>Title</h2>
+    </section> <!-- // section -->
+  </div> <!-- // container -->
+
+  <script>    
+    panelOpen = true;        
+    var allWidth = $(window).width();
+    var newWidth = $(window).width() - 370;
+    var openWidth = $(window).width() - 10;
+    var openWidth2 = $(window).width() - 380;
+    $('.btn__panel--ctrl').click(function (e) { 
+      e.preventDefault();
+      if (panelOpen) {
+        $(this).addClass('open');
+        $('#nav').stop(true,true).animate({'margin-left':'-370px'},500,function(){panelOpen=false;});              
+        $('#section__wrap').stop(true,true).animate({'width':openWidth},500,function(){panelOpen=false;});              
+      } else {      
+        $(this).removeClass('open');
+        $('#nav').stop(true,true).animate({'margin-left':'0px'},500,function(){panelOpen=true;});
+        $('#section__wrap').stop(true,true).animate({'width':openWidth2},500,function(){panelOpen=true;});        
+      }
+    });
+  </script>
+</body>
+</html>
