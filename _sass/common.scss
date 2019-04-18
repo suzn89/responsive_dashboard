@@ -12,12 +12,12 @@ body {
   -webkit-box-shadow:3px 0px 5px rgba($color: #000000, $alpha: 0.2);
   box-shadow:3px 0px 5px rgba($color: #000000, $alpha: 0.2);
   z-index: 200; 
-  .top {
+  .aside__top {
     position: relative;
     width:100%;
     height: 70px;
     background:#212D3B;
-    .close i {
+    .btn--close i {
       position: absolute;
       top:0;
       right:0;      
@@ -32,7 +32,7 @@ body {
     }
   }
 }
-#aside.panel--close {
+#aside.aside--close {
   margin-left: -300px;
   transition:0.5s;
 }
@@ -41,7 +41,7 @@ body {
   width: calc(100% - 280px);
   transition:0.5s;
 }
-#wrap.panel--close {
+#wrap.aside--close {
   width: 100%;
   transition:0.5s;
 }
@@ -50,7 +50,7 @@ body {
   width:100%;
   height:70px;
   background:#ffffff; 
-  button.open {
+  button.btn--open {
     position: fixed;
     left: 20px;
     top: 16px;  

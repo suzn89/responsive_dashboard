@@ -13,13 +13,26 @@
 </head>
 <body>
   <aside id="aside">
-    <div class="top">
-      <button value="close" class="close"><i class="icon-arrow-left2"></i></button>
+    <div class="aside__top">
+      <button value="close" class="btn--close"><i class="icon-arrow-left2"></i></button>
+    </div>
+    <div class="aside__menus">
+      <ul class="menu">
+        <li class="menu__first">
+          <a href="#">1depth menu</a>
+        </li>
+        <li class="menu__first">
+          <a href="#">1depth menu</a>
+          <ul class="menu__twoDepth">
+            
+          </ul>
+        </li>
+      </ul>
     </div>
   </aside>
   <section id="wrap">
     <div id="header">
-      <button value="open" class="open"><i class="icon-menu"></i></button>
+      <button value="open" class="btn--open"><i class="icon-menu"></i></button>
     </div>
     <div id="container">
       <h2>컨텐츠내용</h2>
